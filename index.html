@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratyusha Chakraborty — Content Writer & Copywriter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFFDF7;
+    --ink:#1B1B1B;
+    --ink-soft:#68656A;
+    --coral:#FF5D3A;
+    --coral-soft:#FFE3DA;
+    --violet:#4B2E83;
+    --violet-soft:#EDE5FA;
+    --yellow:#FFC93C;
+    --yellow-soft:#FFF6D9;
+    --mint:#1FA37C;
+    --mint-soft:#DFF5EC;
+    --line:#EDE9E1;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:'Poppins',sans-serif;font-weight:400;
+    font-size:16px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--yellow);color:var(--ink);}
+  a{color:inherit;}
+  h1,h2,h3{font-family:'Fredoka',sans-serif;font-weight:600;margin:0;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 32px;}
+
+  .mark{
+    background-image:linear-gradient(120deg, var(--yellow) 0%, var(--yellow) 100%);
+    background-repeat:no-repeat;
+    background-size:100% 0.5em;
+    background-position:0 78%;
+    padding:0 2px;
+  }
+  .mark.coral{background-image:linear-gradient(120deg, var(--coral-soft) 0%, var(--coral-soft) 100%);}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:100;padding:20px 0;}
+  nav.wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    background:var(--cream);
+    border:2.5px solid var(--ink);
+    border-radius:100px;
+    padding:12px 12px 12px 26px;
+    box-shadow:5px 5px 0 var(--ink);
+  }
+  .logo{font-family:'Fredoka',sans-serif;font-weight:600;font-size:19px;}
+  .logo span{color:var(--coral);}
+  .navlinks{display:flex;gap:26px;list-style:none;margin:0;padding:0;align-items:center;}
+  .navlinks a{font-size:14px;font-weight:500;text-decoration:none;color:var(--ink);transition:color .15s;}
+  .navlinks a:hover{color:var(--coral);}
+  .nav-cta{
+    background:var(--ink);color:var(--cream)!important;
+    padding:10px 22px;border-radius:100px;font-weight:600!important;
+  }
+  .nav-cta:hover{background:var(--coral)!important;color:var(--ink)!important;}
+  .navtoggle{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .navtoggle span{display:block;width:22px;height:2.5px;background:var(--ink);margin:5px 0;border-radius:2px;}
+  @media (max-width:860px){
+    .navlinks{
+      position:absolute;top:calc(100% + 10px);left:32px;right:32px;
+      flex-direction:column;background:var(--cream);
+      border:2.5px solid var(--ink);border-radius:24px;
+      padding:22px;gap:16px;box-shadow:5px 5px 0 var(--ink);
+      display:none;align-items:flex-start;
+    }
+    .navlinks.open{display:flex;}
+    .navtoggle{display:block;}
+    .nav-cta{width:100%;text-align:center;}
+  }
+
+  section{padding:110px 0;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;
+    background:var(--ink);color:var(--cream);
+    padding:7px 16px;border-radius:100px;margin-bottom:22px;
+  }
+  .eyebrow.coral{background:var(--coral);}
+  .eyebrow.violet{background:var(--violet);}
+  .eyebrow.mint{background:var(--mint);}
+
+  /* HERO */
+  #home{
+    background:linear-gradient(135deg, #FFFDF7 0%, #FFF0D6 55%, #FFE3B0 100%);
+  }
+  #home .hero-grid{
+    display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:stretch;
+    padding-top:20px;
+  }
+  .hero h1{font-size:clamp(38px,5.6vw,64px);line-height:1.08;}
+  .hero p.lead{font-size:18px;color:var(--ink-soft);max-width:50ch;margin-top:24px;}
+  .btnrow{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;}
+  .btn{
+    font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;
+    padding:15px 28px;border-radius:100px;text-decoration:none;display:inline-block;
+    border:2.5px solid var(--ink);transition:transform .15s, box-shadow .15s;
+    box-shadow:4px 4px 0 var(--ink);
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);}
+  .btn:active{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink);}
+  .btn-solid{background:var(--coral);color:var(--ink);}
+  .btn-line{background:var(--cream);color:var(--ink);}
+
+  .blob-frame{position:relative;justify-self:end;width:100%;max-width:620px;height:100%;max-height:620px;display:flex;align-items:center;justify-content:flex-end;transform:translateX(18px);}
+  .hero-illustration{width:100%;height:100%;display:block;object-fit:contain;}
+  .sticker{
+    position:absolute;background:var(--yellow);border:2.5px solid var(--ink);
+    border-radius:100px;padding:10px 18px;font-family:'Fredoka',sans-serif;
+    font-weight:600;font-size:14px;box-shadow:4px 4px 0 var(--ink);
+    transform:rotate(-8deg);
+  }
+  .sticker.s1{top:-14px;left:-22px;}
+  .sticker.s2{bottom:8px;right:-18px;background:var(--mint-soft);transform:rotate(6deg);}
+  @media (max-width:860px){
+    #home .hero-grid{grid-template-columns:1fr;}
+    .blob-frame{justify-self:center;margin-top:20px;height:440px;max-width:440px;}
+    .hero-illustration{width:100%;height:100%;}
+  }
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:80px;}
+  .stat{
+    background:var(--cream);border:2.5px solid var(--ink);border-radius:20px;
+    padding:22px 18px;box-shadow:4px 4px 0 var(--ink);text-align:center;
+  }
+  .stat .num{font-family:'Fredoka',sans-serif;font-size:32px;font-weight:700;color:var(--coral);}
+  .stat .label{font-size:12px;font-weight:500;color:var(--ink-soft);margin-top:4px;}
+  @media (max-width:700px){.stats{grid-template-columns:1fr 1fr;}}
+
+  /* SECTION HEAD */
+  .sec-head{max-width:620px;margin-bottom:56px;}
+  .sec-head h2{font-size:clamp(28px,3.6vw,42px);}
+  .sec-head p{color:var(--ink-soft);margin-top:14px;font-size:16.5px;}
+  .sec-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+
+  /* ABOUT */
+  #about{background:linear-gradient(to left, #FFF6D9 0%, #EDE5FA 55%);position:relative;}
+  #about .sec-head{margin-bottom:26px;}
+  .about-photo{
+    position:relative;height:100%;min-height:340px;
+    display:flex;flex-direction:column;padding-top:150px;
+  }
+  .about-photo .frame{
+    position:relative;flex:1 1 auto;overflow:hidden;
+  }
+  .about-photo .frame img{
+    width:100%;height:100%;object-fit:cover;object-position:top center;
+    display:block;
+    -webkit-mask-image: linear-gradient(to bottom, black 86%, transparent 100%), linear-gradient(to top, black 90%, transparent 100%), linear-gradient(to right, black 90%, transparent 100%), linear-gradient(to left, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 86%, transparent 100%), linear-gradient(to top, black 90%, transparent 100%), linear-gradient(to right, black 90%, transparent 100%), linear-gradient(to left, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
+  }
+  .about-photo .caption{
+    font-family:'Fredoka',sans-serif;font-style:normal;font-weight:500;
+    font-size:15px;color:var(--ink-soft);text-align:center;
+    margin-top:-18px;padding:0 12px;
+  }
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch;}
+  .about-grid p{color:var(--ink-soft);margin:0 0 16px;}
+  .about-grid p:last-child{margin-bottom:0;}
+  .quote-card{
+    background:var(--cream);border:2.5px solid var(--ink);border-radius:24px;
+    padding:34px;box-shadow:6px 6px 0 var(--ink);
+  }
+  .quote-card p{
+    font-family:'Fredoka',sans-serif;font-weight:500;font-size:22px;color:var(--ink);
+    margin:0;line-height:1.35;
+  }
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:32px;}
+    .about-photo{height:320px;min-height:320px;padding-top:60px;}
+  }
+
+  /* SERVICES */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .service-card{
+    background:var(--cream);border:2.5px solid var(--ink);border-radius:22px;
+    padding:28px;box-shadow:5px 5px 0 var(--ink);transition:transform .15s,box-shadow .15s;
+  }
+  .service-card:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink);}
+  .service-card .tag{
+    display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;
+    padding:5px 12px;border-radius:100px;margin-bottom:14px;
+  }
+  .service-card h3{font-size:19px;margin-bottom:8px;}
+  .service-card p{color:var(--ink-soft);font-size:14.5px;margin:0;}
+  @media (max-width:860px){.grid-3{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.grid-3{grid-template-columns:1fr;}}
+
+  /* PROCESS */
+  #process{background:var(--yellow-soft);}
+  .proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .proc-card{
+    background:var(--cream);border:2.5px solid var(--ink);border-radius:22px;
+    padding:30px 24px;box-shadow:5px 5px 0 var(--ink);position:relative;
+  }
+  .proc-card .pnum{
+    width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--cream);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fredoka',sans-serif;font-weight:600;font-size:18px;margin-bottom:16px;
+  }
+  .proc-card h3{font-size:18.5px;margin-bottom:8px;}
+  .proc-card p{color:var(--ink-soft);font-size:14px;margin:0;}
+  @media (max-width:860px){.proc-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:560px){.proc-grid{grid-template-columns:1fr;}}
+
+  /* SOCIAL */
+  .social-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+  .social-card{
+    border:2.5px solid var(--ink);border-radius:22px;padding:28px;
+    box-shadow:5px 5px 0 var(--ink);
+  }
+  .social-card .plat{
+    display:inline-block;font-size:12px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;
+    padding:5px 12px;border-radius:100px;margin-bottom:12px;background:var(--ink);color:var(--cream);
+  }
+  .social-card h3{font-size:19px;margin-bottom:10px;}
+  .social-card p{color:var(--ink-soft);font-size:14.5px;margin:0;}
+  .social-card.c1{background:var(--coral-soft);}
+  .social-card.c2{background:var(--mint-soft);}
+  .social-card.c3{background:var(--yellow-soft);}
+  .social-card.c4{background:var(--violet-soft);}
+  @media (max-width:700px){.social-grid{grid-template-columns:1fr;}}
+
+  /* WHY */
+  #why{background:var(--mint-soft);}
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px;}
+  .why-item{
+    display:flex;gap:14px;background:var(--cream);border:2.5px solid var(--ink);
+    border-radius:18px;padding:20px 22px;box-shadow:4px 4px 0 var(--ink);
+  }
+  .why-item .check{
+    flex:0 0 30px;height:30px;border-radius:50%;background:var(--coral);
+    color:var(--cream);display:flex;align-items:center;justify-content:center;
+    font-weight:700;font-size:14px;
+  }
+  .why-item h3{font-size:16.5px;margin-bottom:4px;}
+  .why-item p{color:var(--ink-soft);font-size:14px;margin:0;}
+  @media (max-width:700px){.why-grid{grid-template-columns:1fr;}}
+
+  /* CONTACT */
+  #contact{background:var(--violet);color:var(--cream);border-radius:36px;margin:0 20px;padding:100px 40px;}
+  #contact .wrap{padding:0;}
+  #contact .sec-head p{color:#D8CBF2;}
+  #contact .eyebrow{background:var(--yellow);color:var(--ink);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-size:12.5px;font-weight:600;color:#D8CBF2;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.03em;}
+  .field input,.field textarea{
+    width:100%;background:#5B3B99;border:2px solid #7350B8;border-radius:14px;
+    color:var(--cream);font-family:'Poppins';font-size:15px;padding:12px 16px;outline:none;
+    transition:border-color .15s;
+  }
+  .field input:focus,.field textarea:focus{border-color:var(--yellow);}
+  .field textarea{resize:vertical;min-height:90px;}
+  .field input::placeholder,.field textarea::placeholder{color:#B9A6DD;}
+  #contact .btn-solid{background:var(--yellow);border-color:var(--cream);color:var(--ink);box-shadow:4px 4px 0 var(--cream);}
+  #contact .btn-solid:hover{box-shadow:6px 6px 0 var(--cream);}
+  #formNote{margin-top:16px;font-size:13.5px;color:var(--yellow);min-height:18px;font-weight:500;}
+  .direct h3{font-family:'Fredoka',sans-serif;font-size:20px;margin-bottom:20px;}
+  .direct ul{list-style:none;margin:0;padding:0;}
+  .direct li{
+    padding:14px 0;border-bottom:1px solid #6446A6;font-size:15px;color:#E1D6F5;
+  }
+  .direct li a{color:var(--cream);border-bottom:2px solid var(--yellow);text-decoration:none;padding-bottom:1px;}
+  @media (max-width:860px){#contact{margin:0;border-radius:0;padding:80px 32px;}.contact-grid{grid-template-columns:1fr;gap:36px;}}
+
+  /* THANK YOU */
+  #thanks{text-align:center;padding:110px 0;}
+  #thanks h2{font-size:clamp(28px,4.2vw,40px);}
+  #thanks p{color:var(--ink-soft);max-width:50ch;margin:16px auto 0;}
+  .thanks-links{display:flex;gap:18px;justify-content:center;margin-top:34px;flex-wrap:wrap;}
+  .thanks-links a{
+    font-weight:600;font-size:14px;text-decoration:none;color:var(--ink);
+    border:2.5px solid var(--ink);border-radius:100px;padding:12px 22px;
+    box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s;display:inline-block;
+  }
+  .thanks-links a:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink);background:var(--yellow);}
+
+  footer{
+    text-align:center;padding:30px 0;font-size:13px;color:var(--ink-soft);
+    border-top:2px solid var(--line);
+  }
+
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">Pratyusha<span>.</span></div>
+    <button class="navtoggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="navlinks" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#why">Why Me</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow coral">Content Writer &amp; Copywriter</span>
+        <h1>Words That Make You <span class="mark">Rethink</span> &amp; <span class="mark coral">Grow.</span></h1>
+        <p class="lead">Hello, I'm Pratyusha, a content strategist with 7+ years of experience writing SaaS-based B2B and B2C SEO blogs, case studies, newsletters, e-books and social media copy across HR tech, fintech and beyond.</p>
+        <div class="btnrow">
+          <a href="#services" class="btn btn-solid">View my work</a>
+          <a href="#contact" class="btn btn-line">Let's talk →</a>
+        </div>
+      </div>
+      <div class="blob-frame">
+        <img class="hero-illustration" src="assets/hero-illustration.png" alt="Illustration of Pratyusha writing on a tablet at her desk">
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">7+</div><div class="label">YEARS EXPERIENCE</div></div>
+      <div class="stat"><div class="num">5</div><div class="label">INDUSTRIES SERVED</div></div>
+      <div class="stat"><div class="num">150+</div><div class="label">PIECES PUBLISHED</div></div>
+      <div class="stat"><div class="num">2</div><div class="label">LANGUAGES</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <div class="sec-head">
+          <span class="eyebrow violet">About Me</span>
+          <h2>Turning thoughts into content, and content into leads</h2>
+        </div>
+        <p>I'm a content strategist and marketing writer with 7+ years of experience, someone who turns thoughts into articles, and articles into leads. My craft lies in growth focused, SaaS driven writing built for both B2B and B2C audiences.</p>
+        <p>Over the years I've worn many hats: agency writer, B2B/B2C content specialist, freelance content marketer and in house strategist, across EdTech, FinTech, SaaS, CRM &amp; ERP, real estate, pricing pages and digital marketing. Each hat taught me a slightly different way to listen to a brief and answer it in the right voice.</p>
+        <p>Beyond the boardroom brief lives a quieter kind of writing I keep just for myself. Corporate copy pays the bills and sharpens my discipline, while my Medium essays, written as "Pratzz", are where the unfiltered thoughts get to wander, alongside my LinkedIn newsletter, <em>Words to World with Pratzz</em>.</p>
+        <div class="btnrow" style="margin-top:8px;">
+          <a href="https://drive.google.com/file/d/133sRU39zZZ4uwhckFandXyXif2GfmWb0/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-line" style="padding:12px 22px;font-size:14px;">Download resume</a>
+          <a href="https://www.pockethrms.com/author/pratyusha/" target="_blank" rel="noopener" class="btn btn-line" style="padding:12px 22px;font-size:14px;">View author page</a>
+        </div>
+      </div>
+      <div class="about-photo">
+        <div class="frame">
+          <img src="assets/about-photo.jpg" alt="Portrait of Pratyusha Chakraborty">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow coral">Service Category</span>
+      <h2>What I can write for you</h2>
+      <p>SEO-first, brand-true, and built to hold up whether a human or an AI engine is reading it.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service-card"><span class="tag" style="background:var(--coral-soft);">SEO</span><h3>Blogs &amp; Articles</h3><p>SEO-driven long-form and short-form content for B2B and B2C brands that ranks on search engines and keeps readers engaged.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--mint-soft);">Web</span><h3>Website Pages</h3><p>Landing pages, product pages, and industry or location-specific pages designed to communicate your value and convert visitors into customers.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--yellow-soft);">Proof</span><h3>Case Studies</h3><p>Customer success stories that showcase real challenges, practical solutions, and measurable business results to build trust.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--violet-soft);">Email</span><h3>Newsletters</h3><p>Insightful LinkedIn and email newsletters that keep your audience informed, strengthen your brand, and encourage repeat engagement.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--coral-soft);">Guide</span><h3>E-books</h3><p>Well-structured, visually engaging e-books that educate your audience and generate qualified leads.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--mint-soft);">Visual</span><h3>Infographic Copy</h3><p>Concise, easy-to-scan copy that complements design and makes complex information simple to understand.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--yellow-soft);">Social</span><h3>Social Media Copy</h3><p>Platform-specific posts and carousel copy tailored for LinkedIn, Instagram, and Facebook to spark conversations and increase reach.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--violet-soft);">Formal</span><h3>Professional Emails</h3><p>Conversion-focused email copy for campaigns, product launches, and customer communication, optimised for platforms like Mailchimp and HubSpot.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--coral-soft);">Support</span><h3>FAQs</h3><p>Clear, structured, and AI-friendly FAQ content that answers customer questions quickly while improving search visibility.</p></div>
+      <div class="service-card"><span class="tag" style="background:var(--mint-soft);">PR</span><h3>Press Release (PR)</h3><p>Newsworthy, well-structured press releases for launches, milestones, and announcements, written to earn media pickup and stay on-brand.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow mint">My Work Process</span>
+      <h2>How a project moves</h2>
+      <p>The same six steps, whether it's a 600-word FAQ or a 3,000-word pillar blog.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-card"><div class="pnum">1</div><h3>Brief &amp; discovery</h3><p>I start by understanding the goal, the audience and the brand voice. Every piece begins with a proper conversation, not a blank page.</p></div>
+      <div class="proc-card"><div class="pnum">2</div><h3>Research</h3><p>I dig into the topic through keyword analysis, competitor mapping and SERP research using Semrush, Ahrefs and Surfer SEO. This is where the story finds its shape.</p></div>
+      <div class="proc-card"><div class="pnum">3</div><h3>Outline &amp; draft</h3><p>I build a clear structure, then write the first draft with the reader firmly in mind. This stage is raw on purpose, giving ideas room to breathe before they get polished.</p></div>
+      <div class="proc-card"><div class="pnum">4</div><h3>Proofread &amp; benchmark</h3><p>I proofread thoroughly using Grammarly, Claude and ChatGPT, and check the piece against competitor content to see where it stands on depth and clarity.</p></div>
+      <div class="proc-card"><div class="pnum">5</div><h3>Edit &amp; optimise</h3><p>I self-edit for flow and clarity, then optimise the piece for search engines and AI answer engines (GEO/AIO), so it performs wherever readers find it.</p></div>
+      <div class="proc-card"><div class="pnum">6</div><h3>Client review &amp; handover</h3><p>I share the draft, listen closely to feedback and revise until it reads exactly as it should. Then comes the final polish and a publish-ready file, delivered on time.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow coral">Social Media Experience</span>
+      <h2>Where the writing goes to be seen</h2>
+    </div>
+    <div class="social-grid">
+      <div class="social-card c1"><span class="plat">LinkedIn</span><h3>Content &amp; growth strategy</h3><p>I run my own newsletter, <em>Words to World with Pratzz</em>, and have written LinkedIn growth strategy and content for B2B SaaS and HR-tech brands.</p></div>
+      <div class="social-card c2"><span class="plat">Instagram / Facebook</span><h3>Carousels &amp; campaign copy</h3><p>Carousel posts and static content designed in Canva, paired with copy built for scroll-stopping social feeds.</p></div>
+      <div class="social-card c3"><span class="plat">B2B SaaS</span><h3>Brand voice at scale</h3><p>Ongoing social strategy and copy for HR-tech and SaaS brands, kept consistent across every post.</p></div>
+      <div class="social-card c4"><span class="plat">Medium</span><h3>Personal essays</h3><p>Lifestyle and pop-psychology writing under my own byline, a step outside the B2B world.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ME -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow violet">Why Choose Me</span>
+      <h2>What I bring to a project</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><div class="check">✓</div><div><h3>7+ years, five industries</h3><p>SaaS, HR-tech, healthcare, travel and developer tools — I adapt tone fast.</p></div></div>
+      <div class="why-item"><div class="check">✓</div><div><h3>SEO and GEO/AIO fluent</h3><p>Written to rank in search, and to be cited by AI answer engines.</p></div></div>
+      <div class="why-item"><div class="check">✓</div><div><h3>Bilingual storytelling</h3><p>Comfortable writing in English (UK) and Bengali.</p></div></div>
+      <div class="why-item"><div class="check">✓</div><div><h3>Deadline-reliable</h3><p>Used to working closely with SEO, design and marketing teams on schedule.</p></div></div>
+      <div class="why-item"><div class="check">✓</div><div><h3>Format-versatile</h3><p>Blog, case study, e-book, script or social caption — the format changes, the quality doesn't.</p></div></div>
+      <div class="why-item"><div class="check">✓</div><div><h3>Genuinely curious</h3><p>I research before I write, every time — it shows in the accuracy of the final piece.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="wrap">
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Contact Us</span>
+      <h2>Let's write something worth reading</h2>
+      <p>Tell me a little about your project — I'll get back to you shortly.</p>
+    </div>
+    <div class="contact-grid">
+      <form id="contactForm">
+        <div class="field"><label for="name">Name</label><input type="text" id="name" placeholder="Your name" required></div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" placeholder="you@company.com" required></div>
+        <div class="field"><label for="message">Project details</label><textarea id="message" placeholder="Tell me a bit about what you need..." required></textarea></div>
+        <button type="submit" class="btn btn-solid">Send message</button>
+        <div id="formNote"></div>
+      </form>
+      <div class="direct">
+        <h3>Or reach me directly</h3>
+        <ul>
+          <li>Email — <a href="mailto:chakpratyu03@gmail.com">chakpratyu03@gmail.com</a></li>
+          <li>Phone — <a href="tel:+918335879045">+91 83358 79045</a></li>
+          <li>LinkedIn — <a href="https://www.linkedin.com/in/pratyusha-chakraborty03/" target="_blank" rel="noopener">linkedin.com/in/pratyusha-chakraborty03</a></li>
+          <li>Medium — <a href="https://medium.com/@chakpratyu03" target="_blank" rel="noopener">medium.com/@chakpratyu03</a></li>
+          <li>Author page — <a href="https://www.pockethrms.com/author/pratyusha/" target="_blank" rel="noopener">pockethrms.com/author/pratyusha</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- THANK YOU -->
+<section id="thanks">
+  <div class="wrap">
+    <span class="eyebrow mint">Thank You</span>
+    <h2>Thanks for reading this far ✨</h2>
+    <p>Whether you're here for a project, a job, or just to see what I've been writing lately — I appreciate you stopping by.</p>
+    <div class="thanks-links">
+      <a href="https://www.linkedin.com/in/pratyusha-chakraborty03/" target="_blank" rel="noopener">Follow on LinkedIn</a>
+      <a href="https://medium.com/@chakpratyu03" target="_blank" rel="noopener">Read on Medium</a>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Pratyusha Chakraborty. Made with words and a little bit of colour.</footer>
+
+<script>
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  const form = document.getElementById('contactForm');
+  const note = document.getElementById('formNote');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const subject = encodeURIComponent('Project enquiry from ' + name);
+    const body = encodeURIComponent(message + '\n\n— ' + name + ' (' + email + ')');
+    window.location.href = 'mailto:chakpratyu03@gmail.com?subject=' + subject + '&body=' + body;
+    note.textContent = 'Opening your email app to send this — thank you!';
+    setTimeout(() => { document.getElementById('thanks').scrollIntoView({behavior:'smooth'}); }, 900);
+  });
+</script>
+
+</body>
+</html>
