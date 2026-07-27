@@ -268,11 +268,16 @@
   #contact .btn-solid:hover{box-shadow:6px 6px 0 var(--cream);}
   #formNote{margin-top:16px;font-size:13.5px;color:var(--yellow);min-height:18px;font-weight:500;}
   .direct h3{font-family:'Fredoka',sans-serif;font-size:20px;margin-bottom:20px;}
-  .direct ul{list-style:none;margin:0;padding:0;}
-  .direct li{
-    padding:14px 0;border-bottom:1px solid #6446A6;font-size:15px;color:#E1D6F5;
+  .icon-links{display:flex;gap:18px;flex-wrap:wrap;}
+  .icon-btn{
+    width:52px;height:52px;border-radius:50%;
+    background:var(--cream);border:2.5px solid var(--cream);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--violet);box-shadow:4px 4px 0 rgba(0,0,0,0.25);
+    transition:transform .15s,box-shadow .15s,background .15s;
   }
-  .direct li a{color:var(--cream);border-bottom:2px solid var(--yellow);text-decoration:none;padding-bottom:1px;}
+  .icon-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(0,0,0,0.25);background:var(--yellow);}
+  .icon-btn svg{width:24px;height:24px;}
   @media (max-width:860px){#contact{margin:0;border-radius:0;padding:80px 32px;}.contact-grid{grid-template-columns:1fr;gap:36px;}}
 
   /* THANK YOU */
@@ -458,13 +463,20 @@
       </form>
       <div class="direct">
         <h3>Or reach me directly</h3>
-        <ul>
-          <li>Email — <a href="mailto:chakpratyu03@gmail.com">chakpratyu03@gmail.com</a></li>
-          <li>Phone — <a href="tel:+918335879045">+91 83358 79045</a></li>
-          <li>LinkedIn — <a href="https://www.linkedin.com/in/pratyusha-chakraborty03/" target="_blank" rel="noopener">linkedin.com/in/pratyusha-chakraborty03</a></li>
-          <li>Medium — <a href="https://medium.com/@chakpratyu03" target="_blank" rel="noopener">medium.com/@chakpratyu03</a></li>
-          <li>Author page — <a href="https://www.pockethrms.com/author/pratyusha/" target="_blank" rel="noopener">pockethrms.com/author/pratyusha</a></li>
-        </ul>
+        <div class="icon-links">
+          <a class="icon-btn" href="https://www.linkedin.com/in/pratyusha-chakraborty03/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a class="icon-btn" href="https://medium.com/@chakpratyu03" target="_blank" rel="noopener" aria-label="Medium">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.38-2.88-3.38-6.42s1.51-6.42 3.38-6.42 3.38 2.88 3.38 6.42zM24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75c.66 0 1.19 2.58 1.19 5.75z"/></svg>
+          </a>
+          <a class="icon-btn" href="tel:+918335879045" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </a>
+          <a class="icon-btn" href="https://www.instagram.com/prat_zz03/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
